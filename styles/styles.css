@@ -1,0 +1,93 @@
+:root {
+    /* we need a way more pleasing theme, get topher on the horn */
+    --body-bg: #0e0e12;
+    --bg-selector-color: #535369;
+    --top-bar-color: #424254;
+    /* swatch variables */
+    --swatch-bg: #61ca61;
+    /* add swatch variables*/
+    --plus-icon-color: #535369;
+    --add-swatch-bg: #252933;
+    --add-swatch-active: #1c1f26;
+  }
+  
+  body {
+    background-color: var(--body-bg);
+  }
+  
+  .top-bar {
+    height: 50px;
+    width: 100%;
+    /* is this actually needed? */
+    background: var(--top-bar-color);
+  }
+  
+  .bg-selector {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-selector-color);
+    margin: 5px;
+    float: right;
+  }
+  
+  .color-palette {
+    display: flex;
+    flex-flow: row wrap;
+    /* baseline swatch styling */
+    /* actual swatch styling */
+  }
+  .color-palette ul {
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .color-palette .swatch-container,
+  .color-palette .add-swatch-container {
+    height: 250px;
+    width: 200px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+  }
+  .color-palette .swatch-container {
+    background: var(--swatch-bg);
+    justify-content: flex-end;
+  }
+  .color-palette .swatch-container .color-id-readout {
+    cursor: pointer;
+    height: 30px;
+    width: 100%;
+    border-width: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    outline: none;
+    background: inherit;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  .color-palette .swatch-container .color-id-readout::placeholder {
+    color: inherit;
+    text-align: inherit;
+    font-size: inehrit;
+  }
+  .color-palette .add-swatch-container {
+    color: var(--plus-icon-color);
+    font-size: 120px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--add-swatch-bg);
+  }
+  .color-palette .add-swatch-container:hover {
+    background: var(--add-swatch-active);
+  }
+  .color-palette .add-swatch-container:active {
+    scale: 0.97;
+  }
