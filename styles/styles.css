@@ -6,36 +6,49 @@
     /* swatch variables */
     --swatch-bg: #61ca61;
     /* add swatch variables*/
-    --plus-icon-color: #535369;
-    --add-swatch-bg: #252933;
-    --add-swatch-active: #1c1f26;
+    --plus-icon-color: #fff;
+    --add-swatch-bg: #838da5;
+    --add-swatch-hover: #96a5cb;
   }
-  
   body {
     background-color: var(--body-bg);
   }
-  
   .top-bar {
     height: 50px;
-    width: 100%;
-    /* is this actually needed? */
+    display: flex;
+    justify-content: flex-end;
     background: var(--top-bar-color);
   }
-  
-  .bg-selector {
+  .top-bar .bg-selector {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background: var(--bg-selector-color);
     margin: 5px;
-    float: right;
   }
-  
+  .top-bar .add-swatch-container {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    color: var(--plus-icon-color);
+    font-size: 32px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--add-swatch-bg);
+    border-radius: 50%;
+  }
+  .top-bar .add-swatch-container:hover {
+    background: var(--add-swatch-hover);
+  }
+  .top-bar .add-swatch-container:active {
+    scale: 0.97;
+  }
   .color-palette {
     display: flex;
     flex-flow: row wrap;
-    /* baseline swatch styling */
-    /* actual swatch styling */
   }
   .color-palette ul {
     display: flex;
@@ -44,8 +57,7 @@
     margin: 0;
     padding: 0;
   }
-  .color-palette .swatch-container,
-  .color-palette .add-swatch-container {
+  .color-palette .swatch-container {
     height: 250px;
     width: 200px;
     margin: 10px;
@@ -75,19 +87,4 @@
     color: inherit;
     text-align: inherit;
     font-size: inehrit;
-  }
-  .color-palette .add-swatch-container {
-    color: var(--plus-icon-color);
-    font-size: 120px;
-    cursor: pointer;
-    transition-duration: 0.2s;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--add-swatch-bg);
-  }
-  .color-palette .add-swatch-container:hover {
-    background: var(--add-swatch-active);
-  }
-  .color-palette .add-swatch-container:active {
-    scale: 0.97;
   }
