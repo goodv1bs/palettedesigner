@@ -1,6 +1,6 @@
 let defaultPalette = true;
 let defaultColor = '#61ca61';
-const $swatchElement = '<div class="swatch-container"><input class="color-id-readout" type="color" value=""></div>'
+const $swatchElement = '<div class="swatch-container"><div class="color-picker-wrapper"><label>test</label><input class="color-id-readout" type="color" value=""></div></div>'
 
 function createSwatch() { // Create new swatch by composing the elements required
   // compose the element
@@ -27,4 +27,6 @@ $(document).ready(function() {
   $(".add-swatch-container").on("click", function () {
    createSwatch();
   });
+
+
 });

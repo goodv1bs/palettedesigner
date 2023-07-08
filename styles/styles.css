@@ -70,21 +70,29 @@
     justify-content: flex-end;
   }
   .color-palette .swatch-container .color-id-readout {
-    cursor: pointer;
-    height: 30px;
-    width: 100%;
-    border-width: 0;
-    padding: 0;
+    opacity: 0;
+    position: absolute;
+    width: 99%;
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 45px;
+    border: 0;
     margin: 0;
-    width: 100%;
-    outline: none;
-    background: inherit;
-    color: #fff;
-    text-align: center;
-    font-size: 1.2rem;
+    margin-left: -2px;
   }
+  .color-picker-wrapper {
+    color: #fff;
+    padding: 5px 0 0 5px;
+    position: relative;
+    height: 40px;
+    width: 100%;
+  }
+/* 
   .color-palette .swatch-container .color-id-readout::placeholder {
     color: inherit;
     text-align: inherit;
     font-size: inehrit;
-  }
+  } */
