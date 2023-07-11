@@ -1,7 +1,7 @@
 let defaultPalette = true;
 let defaultColor = '#61ca61';
 let swatches = [];
-// base elements
+// base html
 const $swatchElement = '<div class="swatch-container"><div class="color-picker-wrapper"><label>test</label><input class="color-id-readout" type="color" value="#61ca61"></div></div>';
 //unique identifier for each swatch
 let swatchId = 0;
@@ -19,12 +19,12 @@ function createSwatch() { // Create new swatch by composing the elements require
   // set the default color of the new swatch
   colorInput.attr('value', defaultColor);
   // bind the backgrund color of the swatch and the label readout to the value of the color picker
-  colorInput.on("change", function() {
+  colorInput.on("change", () => {
     newestSwatch.css('backgroundColor', colorInput.val());
     colorLabel.html(colorInput.val());
   });
   // and finally send it to the color list
-  $(".color-palette .color-list").append(newSwatchItem);
+  $('.color-palette .color-list').append(newSwatchItem);
   swatches.push(newestSwatch);
 }
 
@@ -34,7 +34,7 @@ function uniqueIdGenerator() {
   return swatchId.toString();
 }
 
-$(document).ready(function() {
+$(document).ready(() => {
   // init new palette
   if(defaultPalette === true) {
     createSwatch();
@@ -44,7 +44,7 @@ $(document).ready(function() {
   }
 
   //add swatch button
-  $(".add-swatch-container").on("click", function () {
+  $('.add-swatch-container').on('click', () => {
    createSwatch();
   });
 
