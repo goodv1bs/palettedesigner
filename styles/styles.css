@@ -89,7 +89,20 @@
     font-size: inherit;
   }
   #mode-icon  {
-    justify-self: flex-start;
+    position: absolute;
+    left: 0;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    color: var(--plus-icon-color);
+    font-size: 32px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--add-swatch-bg);
+    border-radius: 50%;
   }
 
   
