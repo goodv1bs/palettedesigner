@@ -32,12 +32,10 @@ $(document).ready(function() {
   //add swatch button
   $(".add-swatch-container").on("click", function () {
    createSwatch();
-  });
+  })
 
   //add switch mode button
-  $("#mode-icon").on("click", function() {
-    modeSwitcher();
-  });
+  $("#mode-icon").on("click", modeSwitcher());
 
 });
 
