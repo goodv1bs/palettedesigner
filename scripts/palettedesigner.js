@@ -28,10 +28,14 @@ function createSwatch() { // Create new swatch by composing the elements require
   swatches.push(newestSwatch);
 }
 
-// generates a number to identify each swatch
 function uniqueIdGenerator() {
   swatchId++;
   return swatchId.toString();
+}
+
+function modeSwitcher() {
+  $("body").toggleClass("dark-theme light-theme");
+  $(".mode-icon i").toggleClass("fa-moon fa-sun");
 }
 
 $(document).ready(() => {
@@ -41,12 +45,15 @@ $(document).ready(() => {
   }
   else {
     // load palette idk how yet
-  }
+  } 
 
   //add swatch button
   $('.add-swatch-container').on('click', () => {
    createSwatch();
-  });
+  })
 
-
+  //add switch mode button
+  $(".mode-icon").on("click", modeSwitcher);
+  $("body").toggleClass("dark-theme");
 });
+
