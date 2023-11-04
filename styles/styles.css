@@ -1,108 +1,139 @@
 :root {
-    /* we need a way more pleasing theme, get topher on the horn */
-    --body-bg: #0e0e12;
-    --bg-selector-color: #535369;
-    --top-bar-color: #424254;
-    /* swatch variables */
-    --swatch-bg: #61ca61;
-    /* add swatch variables*/
-    --plus-icon-color: #fff;
-    --add-swatch-bg: #838da5;
-    --add-swatch-hover: #96a5cb;
-  }
-  body {
-    background-color: var(--body-bg);
-  }
-  .top-bar {
-    height: 50px;
-    display: flex;
-    justify-content: flex-end;
-    background: var(--top-bar-color);
-  }
-  .top-bar .bg-selector {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--bg-selector-color);
-    margin: 5px;
-  }
-  .top-bar .add-swatch-container {
-    display: flex;
-    height: 40px;
-    width: 40px;
-    margin: 5px;
-    color: var(--plus-icon-color);
-    font-size: 32px;
-    cursor: pointer;
-    transition-duration: 0.2s;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--add-swatch-bg);
-    border-radius: 50%;
-  }
-  .top-bar .add-swatch-container:hover {
-    background: var(--add-swatch-hover);
-  }
-  .top-bar .add-swatch-container:active {
-    scale: 0.97;
-  }
-  .color-palette {
-    display: flex;
-    flex-flow: row wrap;
-  }
-  .color-palette ul {
-    display: flex;
-    flex-flow: row wrap;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  .color-palette .swatch-container {
-    height: 250px;
-    width: 200px;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-  }
-  .color-palette .swatch-container {
-    background: var(--swatch-bg);
-    justify-content: flex-end;
-  }
-  .color-palette .swatch-container .color-id-readout {
-    cursor: pointer;
-    height: 30px;
-    width: 100%;
-    border-width: 0;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    outline: none;
-    background: inherit;
-    color: #fff;
-    text-align: center;
-    font-size: 1.2rem;
-  }
-  .color-palette .swatch-container .color-id-readout::placeholder {
-    color: inherit;
-    text-align: inherit;
-    font-size: inherit;
-  }
-  #mode-icon  {
-    position: absolute;
-    left: 0;
-    display: flex;
-    height: 40px;
-    width: 40px;
-    margin: 5px;
-    color: var(--plus-icon-color);
-    font-size: 32px;
-    cursor: pointer;
-    transition-duration: 0.2s;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--add-swatch-bg);
-    border-radius: 50%;
-  }
+  /* we need a way more pleasing theme, get topher on the horn */
+  /* dark theme */
+  --dark-theme-body-bg: #0e0e12;
+  --dark-theme-plus-icon-color: #fff;
+  --dark-theme-add-swatch-bg: #838da5;
+  --dark-theme-add-swatch-hover: #96a5cb;
+  --dark-theme-top-bar-color: #424254;
+  /* light theme */
+  --light-theme-body-bg: #f2f2f2;
+  --light-theme-plus-icon-color: #111111;
+  --light-theme-add-swatch-bg: #838da5;
+  --light-theme-add-swatch-hover: #444444;
+  --light-theme-top-bar-color: #cacaca;
+  /* swatch variables */
+  --swatch-bg: #61ca61;
+  /* add swatch variables*/
 
-  
+}
+/* dark theme rulesets */
+body.dark-theme {
+  background-color: var(--dark-theme-body-bg);
+}
+body.dark-theme .top-bar {
+  background: var(--dark-theme-top-bar-color);
+}
+body.dark-theme .add-swatch-container {
+  background-color: var(--dark-theme-add-swatch-bg);
+}
+body.dark-theme .add-swatch-container .plus-icon {
+  color: var(--dark-theme-plus-icon-color);
+}
+body.dark-theme .add-swatch-container:hover {
+  background: var(--dark-theme-add-swatch-hover);
+}
+
+/* light theme rulesets */
+body.light-theme {
+  background-color: var(--light-theme-body-bg);
+}
+body.light-theme .top-bar {
+  background: var(--light-theme-top-bar-color);
+}
+body.light-theme .add-swatch-container {
+  background-color: var(--light-theme-add-swatch-bg);
+}
+body.light-theme .add-swatch-container .plus-icon {
+  color: var(--light-theme-plus-icon-color);
+}
+body.light-theme .add-swatch-container:hover {
+  background: var(--light-theme-add-swatch-hover);
+}
+
+.top-bar {
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+.top-bar .bg-selector {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 5px;
+}
+.top-bar .add-swatch-container {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+  font-size: 32px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.top-bar .add-swatch-container:active {
+  scale: 0.97;
+}
+.color-palette {
+  display: flex;
+  flex-flow: row wrap;
+}
+.color-palette ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.color-palette .swatch-container {
+  height: 250px;
+  width: 200px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.color-palette .swatch-container {
+  background: var(--swatch-bg);
+  justify-content: flex-end;
+}
+.color-palette .swatch-container .color-id-readout {
+  cursor: pointer;
+  height: 30px;
+  width: 100%;
+  border-width: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  outline: none;
+  background: inherit;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.color-palette .swatch-container .color-id-readout::placeholder {
+  color: inherit;
+  text-align: inherit;
+  font-size: inherit;
+}
+.mode-icon  {
+  position: absolute;
+  left: 0;
+  display: flex;
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+  color: var(--dark-theme-plus-icon-color);
+  font-size: 32px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-theme-add-swatch-bg);
+  border-radius: 50%;
+}
+

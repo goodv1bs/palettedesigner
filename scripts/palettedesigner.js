@@ -3,6 +3,7 @@ let defaultColor = '#61ca61';
 const $swatchElement = '<div class="swatch-container"><input class="color-id-readout" type="color" value=""></div>';
 //unique identifier for each swatch
 let swatchId = 0;
+let initial = true;
 function createSwatch() { // Create new swatch by composing the elements required
   // compose the element
   let newSwatchItem = document.createElement('li');
@@ -20,6 +21,8 @@ function uniqueIdGenerator() {
   return swatchId.toString();
 }
 
+
+
 $(document).ready(function() {
   // init new palette
   if(defaultPalette === true) {
@@ -27,7 +30,7 @@ $(document).ready(function() {
   }
   else {
     // load palette idk how yet
-  }
+  } 
 
   //add swatch button
   $(".add-swatch-container").on("click", function () {
@@ -35,11 +38,16 @@ $(document).ready(function() {
   })
 
   //add switch mode button
-  $("#mode-icon").on("click", modeSwitcher());
-
+  $(".mode-icon").on("click", modeSwitcher);
+  $("body").toggleClass("dark-theme");
 });
 
-// stores the state of dark mode
+function modeSwitcher() {
+  $("body").toggleClass("dark-theme", "light-theme");
+}
+
+
+/*// stores the state of dark mode
 let darkMode = true;
 function modeSwitcher(){
   // stores the new properties of each 
@@ -61,4 +69,4 @@ function modeSwitcher(){
     // swap css properties
     $(":root").css(darkPalette); 
   }
-};
+};*/
