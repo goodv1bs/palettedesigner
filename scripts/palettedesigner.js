@@ -43,7 +43,7 @@ $(document).ready(function() {
 });
 
 function modeSwitcher() {
-  $("body").toggleClass("dark-theme", "light-theme");
+  $("body").toggleClass("dark-theme light-theme");
 }
 
 
