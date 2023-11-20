@@ -1,1 +1,7 @@
-pure html/css/js for now. just drag index.html into your browser to use. needs a thoughtful design before we can host and add any kind of data permanance.
+# getting started 🎨🖌️😋
+* `git clone https://github.com/goodv1bs/palettedesigner.git`
+* `cd palettedesigner`
+* `npm install`
+* `npm start`
+* http://localhost:8000/
+hi5 \o/\o/
