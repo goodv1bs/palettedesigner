@@ -1,4 +1,4 @@
-let defaultPalette = true;
+let defaultPalette = false;
 let defaultColor = '#61ca61';
 let swatches = [];
 // base html
@@ -28,7 +28,8 @@ function createSwatch() { // Create new swatch by composing the elements require
   swatches.push(newestSwatch);
 }
 
-function uniqueIdGenerator() {
+function uniqueIdGenerator(amountOfSwatches) {
+  swatchId = amountOfSwatches.length;
   swatchId++;
   return swatchId.toString();
 }
@@ -44,7 +45,9 @@ $(document).ready(() => {
     createSwatch();
   }
   else {
-    // load palette idk how yet
+    fetch('./mockdata/palette.json')
+      .then((response) => response.json())
+      .then((json) => console.log(json));
   } 
 
   //add swatch button
