@@ -1,12 +1,11 @@
 {
-    "name" : "palette",
-    "colors" : {
-        "swatch1" : "#202426",
-        "swatch2" : "#6C733D",
-        "swatch3" : "#9DA65D",
-        "swatch4" : "#9DA65D",
-        "swatch5" : "#8C8C88",
-        "swatch6" : "#F2F2F2",
-        "swatch7" : "#BFBFB8"
-    }
+    "colors" : [
+        "#202426",
+        "#6C733D",
+        "#9DA65D",
+        "#9DA65D",
+        "#8C8C88",
+        "#F2F2F2",
+        "#BFBFB8"
+    ]
 }
